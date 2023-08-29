@@ -11,16 +11,16 @@
 
 // ----- YOUR ANSWERS ------
 
-export const ANSWER_I = 'O(1)'
+export const ANSWER_I = "O(n^2)";
 
 // ------------------------
 
 export const returnDuplicate = (a: number[], b: number[]) => {
-  const duplicates = []
+  const duplicates = [];
 
   a.forEach((element) => {
-    if (b.includes(element)) duplicates.push(element)
-  })
+    if (b.includes(element)) duplicates.push(element);
+  });
 
-  return duplicates
-}
+  return duplicates;
+};

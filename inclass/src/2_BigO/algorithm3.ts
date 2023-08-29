@@ -12,20 +12,20 @@
 // ----- YOUR ANSWERS ------
 // assume your answer contains A and B
 
-export const ANSWER_C = 'O(1)'
+export const ANSWER_C = "O(A B)";
 
 // ------------------------
 
 export const printUnorderedPairs = (arrayA: number[], arrayB: number[]) => {
   arrayA.forEach((a) => {
-    helper(a, arrayB)
-  })
-}
+    helper(a, arrayB);
+  });
+};
 
 const helper = (a: number, arrayB: number[]) => {
-  let i = 0
+  let i = 0;
   while (i < arrayB.length) {
-    if (a > arrayB[i]) console.log(a, arrayB[i])
-    i++
+    if (a > arrayB[i]) console.log(a, arrayB[i]);
+    i++;
   }
-}
+};

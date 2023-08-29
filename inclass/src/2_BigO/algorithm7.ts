@@ -11,18 +11,18 @@
 
 // ----- YOUR ANSWERS ------
 
-export const ANSWER_G = 'O(1)'
+export const ANSWER_G = "O(log n)";
 
 // ------------------------
 
 export const powersOf2 = (n: number) => {
   if (n < 1) {
-    return 0
+    return 0;
   } else if (n === 1) {
-    return 1
+    return 1;
   }
 
-  const prev = powersOf2(n / 2)
-  const curr = prev * 2
-  return curr
-}
+  const prev = powersOf2(n / 2);
+  const curr = prev * 2;
+  return curr;
+};

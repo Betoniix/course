@@ -12,21 +12,21 @@
 // ----- YOUR ANSWERS ------
 //This algorithm is a very famous one.
 
-export const ANSWER_E = 'O(1)'
-export const EXTRA_POINT1 = 'what algorythm is'
+export const ANSWER_E = "O(log n)";
+export const EXTRA_POINT1 = "binary search";
 
 // ------------------------
 
 export const whatIsThis = (arr: number[], x: number) => {
-  let start = 0
-  let end = arr.length - 1
+  let start = 0;
+  let end = arr.length - 1;
 
   while (start <= end) {
-    let mid = Math.floor((start + end) / 2)
+    let mid = Math.floor((start + end) / 2);
 
-    if (arr[mid] === x) return true
-    else if (arr[mid] < x) start = mid + 1
-    else end = mid - 1
+    if (arr[mid] === x) return true;
+    else if (arr[mid] < x) start = mid + 1;
+    else end = mid - 1;
   }
-  return false
-}
+  return false;
+};
