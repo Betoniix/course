@@ -52,14 +52,13 @@ class Counter {
     let currentIndex = 0;
 
     for (let i = 0; i < this.MAX_FRAMES; i++) {
+      this.strategy = Strategies.get(StrategyType.STANDARD);
+
       if (rolls[currentIndex] === this.MAX_PINS)
         this.strategy = Strategies.get(StrategyType.STRIKE);
 
       if (rolls[currentIndex] + rolls[currentIndex + 1] === this.MAX_PINS)
         this.strategy = Strategies.get(StrategyType.SPARE);
-
-      if (rolls[currentIndex] + rolls[currentIndex + 1] < this.MAX_PINS)
-        this.strategy = Strategies.get(StrategyType.STANDARD);
 
       const result = this.strategy.calculate(rolls, currentIndex);
       finalScore += result.result;
